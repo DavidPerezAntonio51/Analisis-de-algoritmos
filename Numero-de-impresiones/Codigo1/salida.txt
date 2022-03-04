@@ -1,0 +1,171 @@
+***********************************************************************************
+n = -1
+***********************************************************************************
+n = 0
+***********************************************************************************
+n = 1
+***********************************************************************************
+n = 2
+***********************************************************************************
+n = 3
+Algoritmos 1
+***********************************************************************************
+n = 5
+Algoritmos 1
+Algoritmos 2
+***********************************************************************************
+n = 15
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+***********************************************************************************
+n = 20
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+***********************************************************************************
+n = 100
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+***********************************************************************************
+n = 409
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+Algoritmos 7
+Algoritmos 8
+***********************************************************************************
+n = 500
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+Algoritmos 7
+Algoritmos 8
+***********************************************************************************
+n = 593
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+Algoritmos 7
+Algoritmos 8
+Algoritmos 9
+***********************************************************************************
+n = 1000
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+Algoritmos 7
+Algoritmos 8
+Algoritmos 9
+***********************************************************************************
+n = 1471
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+Algoritmos 7
+Algoritmos 8
+Algoritmos 9
+Algoritmos 10
+***********************************************************************************
+n = 1500
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+Algoritmos 7
+Algoritmos 8
+Algoritmos 9
+Algoritmos 10
+***********************************************************************************
+n = 2081
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+Algoritmos 7
+Algoritmos 8
+Algoritmos 9
+Algoritmos 10
+Algoritmos 11
+***********************************************************************************
+n = 3000
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+Algoritmos 7
+Algoritmos 8
+Algoritmos 9
+Algoritmos 10
+Algoritmos 11
+***********************************************************************************
+n = 5000
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+Algoritmos 7
+Algoritmos 8
+Algoritmos 9
+Algoritmos 10
+Algoritmos 11
+Algoritmos 12
+***********************************************************************************
+n = 10000
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+Algoritmos 7
+Algoritmos 8
+Algoritmos 9
+Algoritmos 10
+Algoritmos 11
+Algoritmos 12
+Algoritmos 13
+***********************************************************************************
+n = 20000
+Algoritmos 1
+Algoritmos 2
+Algoritmos 3
+Algoritmos 4
+Algoritmos 5
+Algoritmos 6
+Algoritmos 7
+Algoritmos 8
+Algoritmos 9
+Algoritmos 10
+Algoritmos 11
+Algoritmos 12
+Algoritmos 13
+Algoritmos 14

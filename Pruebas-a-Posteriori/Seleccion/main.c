@@ -9,8 +9,9 @@ int main(int argc, char *argv[])
     int n = atoi(argv[1]);
     int A[n];
     int i;
-    int j;
-    int aux;
+    int p;
+    int k;
+    int temp;
     int i_lectura;
 
     printf("-------------------------------------------\n");
@@ -20,17 +21,20 @@ int main(int argc, char *argv[])
     {
         scanf("%d", &A[i_lectura]);
     }
-    // Ejecucion de ordenamiento por Inserccion
-    for (i = 0; i <= n - 1; i++)
+    // Ejecucion de ordenamiento por Seleccion
+    for (k = 0; k <= n - 2; k++)
     {
-        j = i;
-        aux = A[i];
-        while (j > 0 && aux < A[j - 1])
+        p = k;
+        for (i = k + 1; i <= n - 1; i++)
         {
-            A[j] = A[j - 1];
-            j--;
+            if (A[i] < A[p])
+            {
+                p = i;
+            }
         }
-        A[j] = aux;
+        temp = A[p];
+        A[p] = A[k];
+        A[k] = temp;
     }
 
     // Impresion de los numeros --------- Desabilitado para obervar resultados de timepo en su lugar

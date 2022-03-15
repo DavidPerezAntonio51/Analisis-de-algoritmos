@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "tiempo.h"
 #include <stdbool.h>
+#include "arbol.h"
 
 int main(int argc, char *argv[])
 {
@@ -9,10 +10,8 @@ int main(int argc, char *argv[])
     int n = atoi(argv[1]);
     int A[n];
     int i;
-    int k;
-    int b;
-    int temp;
     int i_lectura;
+    struct Nodo *arbol;
 
     printf("-------------------------------------------\n");
     // Lectura de los n numeros
@@ -21,26 +20,21 @@ int main(int argc, char *argv[])
     {
         scanf("%d", &A[i_lectura]);
     }
-    // Ejecucion de ordenamiento por Shell
-    k=n/2;
-    while (k>=1)
+    // Ejecucion de ordenamiento por ABB
+    for (i = 0; i < n; i++)
     {
-        b=1;
-        while (b!=0)
+        if (i == 0)
         {
-            b=0;
-            for(i=k;i<n;i++){
-                if(A[i-k]>A[i]){
-                    temp=A[i];
-                    A[i]=A[i-k];
-                    A[i-k] = temp;
-                    b=b+1;
-                }
-            }
+            arbol = nuevoNodo(A[i]);
         }
-        k=k/2;
+        else
+        {
+            insertar(arbol, A[i]);
+        }
     }
-
+    //Se regresan los valores del arbol al arreglo original
+    i = 0;
+    inorden(arbol, &A[0], &i);
     // Impresion de los numeros --------- Desabilitado para obervar resultados de timepo en su lugar
     for (i_lectura = 0; i_lectura < n; i_lectura++)
     {

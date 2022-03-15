@@ -1,3 +1,3 @@
 #!/bin/bash
 gcc main.c tiempo.c -o main
-./main 100 > salida.txt < numeros10millones.txt
+./main 100000 > salida.txt < numeros10millones.txt

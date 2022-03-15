@@ -12,14 +12,14 @@ int main(int argc, char *argv[])
     int aux;
     int i_lectura;
 
-    printf("-------------------------------------------");
+    printf("-------------------------------------------\n");
     // Lectura de los n numeros
+    uswtime(&utime0, &stime0, &wtime0);//Inicia el conteo del tiempo
     for (i_lectura = 0; i_lectura < n; i_lectura++)
     {
         scanf("%d", &A[i_lectura]);
     }
     //Ejecucion del Algritmo Burbuja
-    uswtime(&utime0, &stime0, &wtime0);//Inicia el conteo del tiempo
     for (i = 0; i < n - 2; i++)
     {
         for (j = 0; j < n - 2; j++)

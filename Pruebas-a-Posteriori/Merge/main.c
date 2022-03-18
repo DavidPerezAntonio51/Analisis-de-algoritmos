@@ -21,22 +21,9 @@ int main(int argc, char *argv[])
     {
         scanf("%d", &A[i_lectura]);
     }
-    // Ejecucion de ordenamiento por Seleccion
-    for (k = 0; k <= n - 2; k++)
-    {
-        p = k;
-        for (i = k + 1; i <= n - 1; i++)
-        {
-            if (A[i] < A[p])
-            {
-                p = i;
-            }
-        }
-        temp = A[p];
-        A[p] = A[k];
-        A[k] = temp;
-    }
+    // Ejecucion de ordenamiento por Merge
 
+    
     // Impresion de los numeros --------- Desabilitado para obervar resultados de timepo en su lugar
     for (i_lectura = 0; i_lectura < n; i_lectura++)
     {
@@ -60,4 +47,8 @@ int main(int argc, char *argv[])
     printf("sys (Tiempo en acciónes de E/S)  %.10e s\n", stime1 - stime0);
     printf("CPU/Wall   %.10f %% \n", 100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
     printf("\n");
+}
+
+void Merge(){
+    
 }

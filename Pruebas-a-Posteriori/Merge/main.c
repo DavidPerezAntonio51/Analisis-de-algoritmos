@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
         scanf("%d", &A[i_lectura]);
     }
     // Ejecucion de ordenamiento por Merge
-
+    MergeSort(&A[0],0,n);
     
     // Impresion de los numeros --------- Desabilitado para obervar resultados de timepo en su lugar
     for (i_lectura = 0; i_lectura < n; i_lectura++)
@@ -49,6 +49,23 @@ int main(int argc, char *argv[])
     printf("\n");
 }
 
-void Merge(){
-    
+void MergeSort(int *A, int p, int r){
+    if(p<r){
+        int q = (p+r)/2;
+        MergeSort(A,p,q);
+        MergeSort(A,q+1,r);
+        Merge(A,p,q,r);
+    }
+}
+
+void Merge(int *A,int p,int q,int r){
+    int l = r-p+1;
+    int i=p;
+    int j = q+1;
+    int k;
+    for(k=0;k<l;k++){
+        if(){
+
+        }
+    }
 }

@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "tiempo.h"
-#include <stdbool.h>
+#include <string.h>
+
+void MergeSort(int *A, int p, int r);
+void Merge(int *A,int p,int q,int r);
 
 int main(int argc, char *argv[])
 {
@@ -16,15 +19,15 @@ int main(int argc, char *argv[])
 
     printf("-------------------------------------------\n");
     // Lectura de los n numeros
-    uswtime(&utime0, &stime0, &wtime0); // Inicia el conteo del tiempo
     for (i_lectura = 0; i_lectura < n; i_lectura++)
     {
         scanf("%d", &A[i_lectura]);
     }
+    uswtime(&utime0, &stime0, &wtime0); // Inicia el conteo del tiempo
     // Ejecucion de ordenamiento por Merge
-    MergeSort(&A[0],0,n);
+    MergeSort(&A[0],0,n-1);
     
-    // Impresion de los numeros --------- Desabilitado para obervar resultados de timepo en su lugar
+    // Impresion de los numeros --------- Desabilitado para obervar solo resultados de timepo en su lugar
     for (i_lectura = 0; i_lectura < n; i_lectura++)
     {
         printf("%d\n", A[i_lectura]);
@@ -60,12 +63,27 @@ void MergeSort(int *A, int p, int r){
 
 void Merge(int *A,int p,int q,int r){
     int l = r-p+1;
+    int c[l];
     int i=p;
     int j = q+1;
     int k;
-    for(k=0;k<l;k++){
-        if(){
-
+    for(k=0;k<=l;k++){
+        if(i<=q && j<=r){
+            if(A[i]<A[j]){
+                c[k] = A[i];
+                i++;
+            }else{
+                c[k] = A[j];
+                j++;
+            }
+        }else if (i<=q)
+        {
+            c[k] = A[i];
+            i++;
+        }else{
+            c[k] = A[j];
+            j++;
         }
     }
+    memcpy(&A[p],c,sizeof(int)*(l));
 }

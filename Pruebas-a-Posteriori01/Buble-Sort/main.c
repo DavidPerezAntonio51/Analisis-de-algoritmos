@@ -14,11 +14,11 @@ int main(int argc, char *argv[])
 
     printf("-------------------------------------------\n");
     // Lectura de los n numeros
-    uswtime(&utime0, &stime0, &wtime0);//Inicia el conteo del tiempo
     for (i_lectura = 0; i_lectura < n; i_lectura++)
     {
         scanf("%d", &A[i_lectura]);
     }
+    uswtime(&utime0, &stime0, &wtime0);//Inicia el conteo del tiempo
     //Ejecucion del Algritmo Burbuja
     for (i = 0; i < n - 2; i++)
     {
@@ -34,9 +34,9 @@ int main(int argc, char *argv[])
     }
     
     //Impresion de los numeros --------- Desabilitado para obervar resultados de timepo en su lugar
-    for(i_lectura=0;i_lectura<n;i_lectura++){
+    /*for(i_lectura=0;i_lectura<n;i_lectura++){
         printf("%d\n",A[i_lectura]);
-    }
+    }*/
     
     uswtime(&utime1, &stime1, &wtime1);//Toma el tiempo una vez acabdo el algoritmo
 

@@ -15,11 +15,11 @@ int main(int argc, char *argv[])
 
     printf("-------------------------------------------\n");
     // Lectura de los n numeros
-    uswtime(&utime0, &stime0, &wtime0); // Inicia el conteo del tiempo
     for (i_lectura = 0; i_lectura < n; i_lectura++)
     {
         scanf("%d", &A[i_lectura]);
     }
+    uswtime(&utime0, &stime0, &wtime0); // Inicia el conteo del tiempo
     // Ejecucion de ordenamiento por ABB
     for (i = 0; i < n; i++)
     {
@@ -35,11 +35,11 @@ int main(int argc, char *argv[])
     //Se regresan los valores del arbol al arreglo original
     i = 0;
     inorden(arbol, &A[0], &i);
-    // Impresion de los numeros --------- Desabilitado para obervar resultados de timepo en su lugar
-    for (i_lectura = 0; i_lectura < n; i_lectura++)
+    // Impresion de los numeros --------- Desabilitado para obervar solo resultados de timepo en su lugar
+    /*for (i_lectura = 0; i_lectura < n; i_lectura++)
     {
         printf("%d\n", A[i_lectura]);
-    }
+    }*/
 
     uswtime(&utime1, &stime1, &wtime1); // Toma el tiempo una vez acabdo el algoritmo
 

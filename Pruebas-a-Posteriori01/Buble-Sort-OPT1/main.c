@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "tiempo.h"
-#include <stdbool.h>
 
 int main(int argc, char *argv[])
 {
@@ -9,39 +8,36 @@ int main(int argc, char *argv[])
     int n = atoi(argv[1]);
     int A[n];
     int i;
-    int p;
-    int k;
-    int temp;
+    int j;
+    int aux;
     int i_lectura;
 
     printf("-------------------------------------------\n");
     // Lectura de los n numeros
-    uswtime(&utime0, &stime0, &wtime0); // Inicia el conteo del tiempo
     for (i_lectura = 0; i_lectura < n; i_lectura++)
     {
         scanf("%d", &A[i_lectura]);
     }
-    // Ejecucion de ordenamiento por Seleccion
-    for (k = 0; k <= n - 2; k++)
+    uswtime(&utime0, &stime0, &wtime0); // Inicia el conteo del tiempo
+    // Ejecucion del Algritmo Burbuja
+    for (i = 0; i <= n - 2; i++)
     {
-        p = k;
-        for (i = k + 1; i <= n - 1; i++)
+        for (j = 0; j <=(n - 2) - i; j++)
         {
-            if (A[i] < A[p])
+            if (A[j] > A[j + 1])
             {
-                p = i;
+                aux = A[j];
+                A[j] = A[j + 1];
+                A[j + 1] = aux;
             }
         }
-        temp = A[p];
-        A[p] = A[k];
-        A[k] = temp;
     }
 
     // Impresion de los numeros --------- Desabilitado para obervar resultados de timepo en su lugar
-    for (i_lectura = 0; i_lectura < n; i_lectura++)
+    /*for (i_lectura = 0; i_lectura < n; i_lectura++)
     {
         printf("%d\n", A[i_lectura]);
-    }
+    }*/
 
     uswtime(&utime1, &stime1, &wtime1); // Toma el tiempo una vez acabdo el algoritmo
 

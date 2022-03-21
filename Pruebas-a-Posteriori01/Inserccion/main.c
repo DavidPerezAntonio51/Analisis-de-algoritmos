@@ -9,43 +9,35 @@ int main(int argc, char *argv[])
     int n = atoi(argv[1]);
     int A[n];
     int i;
-    int k;
-    int b;
-    int temp;
+    int j;
+    int aux;
     int i_lectura;
 
     printf("-------------------------------------------\n");
     // Lectura de los n numeros
-    uswtime(&utime0, &stime0, &wtime0); // Inicia el conteo del tiempo
     for (i_lectura = 0; i_lectura < n; i_lectura++)
     {
         scanf("%d", &A[i_lectura]);
     }
-    // Ejecucion de ordenamiento por Shell
-    k=n/2;
-    while (k>=1)
+    uswtime(&utime0, &stime0, &wtime0); // Inicia el conteo del tiempo
+    // Ejecucion de ordenamiento por Inserccion
+    for (i = 0; i <= n - 1; i++)
     {
-        b=1;
-        while (b!=0)
+        j = i;
+        aux = A[i];
+        while (j > 0 && aux < A[j - 1])
         {
-            b=0;
-            for(i=k;i<n;i++){
-                if(A[i-k]>A[i]){
-                    temp=A[i];
-                    A[i]=A[i-k];
-                    A[i-k] = temp;
-                    b=b+1;
-                }
-            }
+            A[j] = A[j - 1];
+            j--;
         }
-        k=k/2;
+        A[j] = aux;
     }
 
     // Impresion de los numeros --------- Desabilitado para obervar resultados de timepo en su lugar
-    for (i_lectura = 0; i_lectura < n; i_lectura++)
+    /*for (i_lectura = 0; i_lectura < n; i_lectura++)
     {
         printf("%d\n", A[i_lectura]);
-    }
+    }*/
 
     uswtime(&utime1, &stime1, &wtime1); // Toma el tiempo una vez acabdo el algoritmo
 

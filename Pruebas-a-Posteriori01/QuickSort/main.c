@@ -15,6 +15,7 @@ int main (int argc, char* argv[])
 	int n;
 	int *arreglo;
 	n=atoi(argv[1]);
+	printf("----------------------------------------------------------\n");
 
 	arreglo = malloc(n*sizeof(int)); 
 	

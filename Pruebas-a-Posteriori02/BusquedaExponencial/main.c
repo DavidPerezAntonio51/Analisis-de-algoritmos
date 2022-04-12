@@ -1,34 +1,67 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "tiempo.h"
 
-int buscarB(int arr[], int l, int izquierda, int x);
+void llenarArreglos(int *arreglo, int n_b);
 int buscarExpo(int arr[], int n, int x);
-void rellenarArreglo(int *arreglo, int n);
-void imprArreglo(int *arreglo, int n);
-int minimos(int x, int y);
 
 int main(int argc, char *argv[])
 {
+/*n sera el tamaño del espacio de busqueda*/
+    int n = atoi(argv[1]);
+    /*b sera la cantidad de elemtos a buscar en la muestra*/
+    int b = atoi(argv[2]);
+    /*Variable que acumula los tiempos obtenidos en segundos*/
+    double tiempo_total = 0;
+    double utime0, stime0, wtime0, utime1, stime1, wtime1;
+    int numeros_a_buscar[] = {322486,
+                              14700764,
+                              3128036,
+                              6337399,
+                              61396,
+                              10393545,
+                              2147445644,
+                              1295390003,
+                              450057883,
+                              187645041,
+                              1980098116,
+                              152503,
+                              5000,
+                              1493283650,
+                              214826,
+                              1843349527,
+                              1360839354,
+                              2109248666,
+                              2147470852,
+                              0};
+    int *muestra;
+    muestra = malloc(n * sizeof(int));
+    llenarArreglos(muestra, n);
+    int i;
+    for (i = 0; i < b; i++)
+    {
+        // mide tiempo inicio
+        uswtime(&utime0, &stime0, &wtime0);
+        buscarExpo(muestra, n, numeros_a_buscar[i]);
+        // mide tiempo fin
+        uswtime(&utime1, &stime1, &wtime1);
+        // acumula valores fin-inicio de tiempo real;
+        tiempo_total = tiempo_total + (wtime1 - wtime0);
+    }
+    /*Divide entre los valores buscados y muestra Tiempo Real*/
+    printf("%.10e;\n", tiempo_total / b);
 
-	int n;
-	int i;
-	int *arreglo;
-	n = atoi(argv[1]);
-
-	arreglo = malloc(n * sizeof(int));
-	rellenarArreglo(arreglo, n);
-
-	int resultado = buscarExpo(arreglo, n, 7);
+    free(muestra);
 }
-void rellenarArreglo(int *arreglo, int n)
-{
 
-	int i = 0;
-	for (i = 0; i < n; i++)
-	{
-		scanf("%d", &arreglo[i]);
-	}
+void llenarArreglos(int *arreglo, int n_b)
+{
+    int i;
+    for (i = 0; i < n_b; i++)
+    {
+        scanf("%d", &arreglo[i]);
+    }
 }
 
 int buscarExpo(int arr[], int n, int x)

@@ -15,7 +15,7 @@ int main (int argc, char* argv[])
 	int n;
 	int *arreglo;
 	n=atoi(argv[1]);
-	printf("----------------------------------------------------------\n");
+	//printf("----------------------------------------------------------\n");
 
 	arreglo = malloc(n*sizeof(int)); 
 	
@@ -26,9 +26,10 @@ int main (int argc, char* argv[])
 	quickSort(arreglo, 0, n-1); //mandamos a llamar a la funcion que iniciara con el ordenamiento
 
 	uswtime(&utime1, &stime1, &wtime1);
-	//imprimirArreglo(arreglo, n);
+	imprimirArreglo(arreglo, n);
 	
 	// Cálculo del tiempo de ejecución del programa
+	/*
     printf("\n");
     printf("real (Tiempo total)  %.10f s\n", wtime1 - wtime0);
     printf("user (Tiempo de procesamiento en CPU) %.10f s\n", utime1 - utime0);
@@ -43,6 +44,7 @@ int main (int argc, char* argv[])
     printf("sys (Tiempo en acciónes de E/S)  %.10e s\n", stime1 - stime0);
     printf("CPU/Wall   %.10f %% \n", 100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
     printf("\n");
+	*/
 }
 
 void llenarArreglo(int* arreglo, int n){
